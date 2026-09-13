@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/component/CategoryCard.css"],"sourcesContent":[".category-card {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 6px;\n  padding: 8px 18px;\n  border-radius: 50px;\n  border: 1px solid #dcdcdc;\n  background-color: #ffffff;\n  color: #222222;\n  font-size: 14px;\n  font-weight: 500;\n  cursor: pointer;\n  white-space: nowrap;\n  transition: all 0.2s ease;\n  outline: none;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);\n}\n\n.category-card:hover {\n  border-color: #aaaaaa;\n  background-color: #f9f9f9;\n}\n\n.category-card.active {\n  border-color: #000000;\n  background-color: #000000;\n  color: #ffffff;\n}\n\n.category-icon {\n  font-size: 15px;\n}"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;AAmBA;;;;;AAKA;;;;;;AAMA"}}]
+}

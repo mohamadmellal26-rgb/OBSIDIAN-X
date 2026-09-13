@@ -1,0 +1,210 @@
+/* Dark Backdrop Overlay */
+.auth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  direction: ltr;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Modal Window Card */
+.auth-modal-card {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 440px;
+  padding: 32px 28px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: modalFadeIn 0.25s ease-out forwards;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Close Button */
+.modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #f1f3f5;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #495057;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Header Text */
+.auth-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 6px 0;
+  color: #111111;
+}
+
+.auth-header p {
+  font-size: 13px;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Tabs Switcher */
+.auth-tabs {
+  display: flex;
+  background: #f1f3f5;
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6c757d;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form inputs */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #212529;
+}
+
+.input-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-wrapper .field-icon {
+  position: absolute;
+  left: 14px;
+  color: #adb5bd;
+}
+
+.input-icon-wrapper input {
+  width: 100%;
+  padding: 10px 14px 10px 42px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-icon-wrapper input:focus {
+  border-color: #000000;
+}
+
+.forgot-password-row {
+  text-align: right;
+  margin-top: -4px;
+}
+
+.forgot-password-row a {
+  font-size: 12px;
+  color: #495057;
+  text-decoration: underline;
+}
+
+.submit-btn {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+  margin-top: 4px;
+}
+
+.submit-btn:hover {
+  background-color: #222222;
+}
+
+/* Footer Badges */
+.auth-features {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f3f5;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #495057;
+  font-weight: 500;
+}
+
+.feature-item svg {
+  color: #000000;
+}

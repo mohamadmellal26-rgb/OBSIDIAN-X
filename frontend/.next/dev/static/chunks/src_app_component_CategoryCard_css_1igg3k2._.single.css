@@ -1,0 +1,36 @@
+/* [project]/src/app/component/CategoryCard.css [app-client] (css) */
+.category-card {
+  color: #222;
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 50px;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all .2s;
+  display: flex;
+  box-shadow: 0 1px 3px #0000000d;
+}
+
+.category-card:hover {
+  background-color: #f9f9f9;
+  border-color: #aaa;
+}
+
+.category-card.active {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+.category-icon {
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=src_app_component_CategoryCard_css_1igg3k2._.single.css.map*/

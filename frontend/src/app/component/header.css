@@ -1,0 +1,251 @@
+/* header.css - Monochrome / Nothing Tech Style */
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* 1. Main Header Layout */
+.site-header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  direction: ltr;
+}
+
+/* 2. Top Announcement Bar */
+.top-bar {
+  background-color: #111111;
+  color: #eeeeee;
+  font-size: 12px;
+  padding: 8px 0;
+  letter-spacing: 0.5px;
+}
+
+.top-bar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo-tag {
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  text-transform: uppercase;
+}
+
+.top-links a {
+  color: #888888;
+  text-decoration: none;
+  margin-left: 15px;
+  transition: color 0.2s ease;
+}
+
+.top-links a:hover {
+  color: #ffffff;
+}
+
+/* 3. Main Header Section */
+.main-header {
+  padding: 16px 0;
+}
+
+.main-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Logo - تم إزالة الخلفية السوداء والحدود المربعة هنا */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background-color: transparent; /* إزالة الخلفية السوداء */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* لتجنب قص الصورة وجعلها تظهر كاملة */
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: -0.5px;
+}
+
+/* Search Form */
+.search-form {
+  flex: 1;
+  max-width: 480px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 16px 10px 42px;
+  font-size: 13px;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  outline: none;
+  background-color: #ffffff;
+  color: #111111;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.search-input::placeholder {
+  color: #888888;
+}
+
+.search-input:focus {
+  border-color: #111111;
+  background-color: #fafafa;
+}
+
+.search-button {
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #333333;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.search-button:hover {
+  color: #111111;
+}
+
+/* Actions (Cart & Wishlist) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.action-item {
+  position: relative;
+  color: #333333;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.action-item:hover {
+  background-color: #f5f5f5;
+  color: #111111;
+}
+
+.badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: #111111;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-emerald {
+  background-color: #333333;
+}
+
+/* 4. Navigation Bar */
+.main-nav {
+  background-color: #ffffff;
+  border-top: 1px solid #f0f0f0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-list li a {
+  display: block;
+  padding: 12px 0;
+  color: #555555;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  transition: color 0.2s;
+}
+
+.nav-list li a:hover {
+  color: #111111;
+}
+
+/* Responsive (Mobile View) */
+@media (max-width: 768px) {
+  .top-links,
+  .main-nav {
+    display: none;
+  }
+
+  .main-header-container {
+    flex-wrap: wrap;
+  }
+
+  .search-form {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+  }
+}

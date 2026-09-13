@@ -1,0 +1,31 @@
+{"timestamp":"00:00:03.082","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:04.980","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:05.991","source":"Browser","level":"ERROR","message":"Failed to fetch products for search TypeError: NetworkError when attempting to fetch resource."}
+{"timestamp":"00:00:05.994","source":"Server","level":"ERROR","message":"[browser] \"Failed to fetch products for search\" \"\\u001b[31mTypeError: NetworkError when attempting to fetch resource.\\u001b[39m\""}
+{"timestamp":"00:00:05.996","source":"Browser","level":"ERROR","message":"Failed to fetch products for search TypeError: NetworkError when attempting to fetch resource."}
+{"timestamp":"00:00:05.996","source":"Server","level":"ERROR","message":"[browser] \"Failed to fetch products for search\" \"\\u001b[31mTypeError: NetworkError when attempting to fetch resource.\\u001b[39m\""}
+{"timestamp":"00:00:28.180","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:28.344","source":"Browser","level":"ERROR","message":"Failed to fetch products for search TypeError: NetworkError when attempting to fetch resource."}
+{"timestamp":"00:00:28.346","source":"Server","level":"ERROR","message":"[browser] \"Failed to fetch products for search\" \"\\u001b[31mTypeError: NetworkError when attempting to fetch resource.\\u001b[39m\""}
+{"timestamp":"00:00:28.347","source":"Browser","level":"ERROR","message":"Failed to fetch products for search TypeError: NetworkError when attempting to fetch resource."}
+{"timestamp":"00:00:28.348","source":"Server","level":"ERROR","message":"[browser] \"Failed to fetch products for search\" \"\\u001b[31mTypeError: NetworkError when attempting to fetch resource.\\u001b[39m\""}
+{"timestamp":"00:00:37.109","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:37.236","source":"Browser","level":"ERROR","message":"Failed to fetch products for search TypeError: NetworkError when attempting to fetch resource."}
+{"timestamp":"00:00:37.237","source":"Server","level":"ERROR","message":"[browser] \"Failed to fetch products for search\" \"\\u001b[31mTypeError: NetworkError when attempting to fetch resource.\\u001b[39m\""}
+{"timestamp":"00:00:37.238","source":"Browser","level":"ERROR","message":"Failed to fetch products for search TypeError: NetworkError when attempting to fetch resource."}
+{"timestamp":"00:00:37.239","source":"Server","level":"ERROR","message":"[browser] \"Failed to fetch products for search\" \"\\u001b[31mTypeError: NetworkError when attempting to fetch resource.\\u001b[39m\""}
+{"timestamp":"00:00:55.149","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:55.285","source":"Browser","level":"ERROR","message":"Failed to fetch products for search TypeError: NetworkError when attempting to fetch resource."}
+{"timestamp":"00:00:55.286","source":"Server","level":"ERROR","message":"[browser] \"Failed to fetch products for search\" \"\\u001b[31mTypeError: NetworkError when attempting to fetch resource.\\u001b[39m\""}
+{"timestamp":"00:00:55.287","source":"Browser","level":"ERROR","message":"Failed to fetch products for search TypeError: NetworkError when attempting to fetch resource."}
+{"timestamp":"00:00:55.288","source":"Server","level":"ERROR","message":"[browser] \"Failed to fetch products for search\" \"\\u001b[31mTypeError: NetworkError when attempting to fetch resource.\\u001b[39m\""}
+{"timestamp":"00:00:57.068","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:57.205","source":"Browser","level":"ERROR","message":"Failed to fetch products for search TypeError: NetworkError when attempting to fetch resource."}
+{"timestamp":"00:00:57.205","source":"Server","level":"ERROR","message":"[browser] \"Failed to fetch products for search\" \"\\u001b[31mTypeError: NetworkError when attempting to fetch resource.\\u001b[39m\""}
+{"timestamp":"00:00:57.206","source":"Browser","level":"ERROR","message":"Failed to fetch products for search TypeError: NetworkError when attempting to fetch resource."}
+{"timestamp":"00:00:57.208","source":"Server","level":"ERROR","message":"[browser] \"Failed to fetch products for search\" \"\\u001b[31mTypeError: NetworkError when attempting to fetch resource.\\u001b[39m\""}
+{"timestamp":"00:01:01.797","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:01:01.920","source":"Browser","level":"ERROR","message":"Failed to fetch products for search TypeError: NetworkError when attempting to fetch resource."}
+{"timestamp":"00:01:01.920","source":"Server","level":"ERROR","message":"[browser] \"Failed to fetch products for search\" \"\\u001b[31mTypeError: NetworkError when attempting to fetch resource.\\u001b[39m\""}
+{"timestamp":"00:01:01.922","source":"Browser","level":"ERROR","message":"Failed to fetch products for search TypeError: NetworkError when attempting to fetch resource."}
+{"timestamp":"00:01:01.923","source":"Server","level":"ERROR","message":"[browser] \"Failed to fetch products for search\" \"\\u001b[31mTypeError: NetworkError when attempting to fetch resource.\\u001b[39m\""}
