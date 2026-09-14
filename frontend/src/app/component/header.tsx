@@ -12,7 +12,9 @@ interface Product {
   categoryName?: string;
 }
 
-const API_BASE_URL = 'http://localhost:8080/api/v1';
+// 🔗 التعديل هنا: توجيه الطلبات إلى سيرفر Render مباشرةً مع دعم متغيرات البيئة
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://obsidian-x.onrender.com';
+const API_BASE_URL = `${BASE_URL.replace(/\/+$/, '')}/api/v1`;
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

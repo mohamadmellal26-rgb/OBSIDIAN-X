@@ -29,9 +29,9 @@ const DEFAULT_CATEGORIES: CategoryItem[] = [
   { id: 3, label: 'Audio', icon: '🎧' },
 ];
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL 
-  ? `${process.env.NEXT_PUBLIC_API_URL.replace(/\/$/, '')}/api/v1` 
-  : 'http://localhost:8080/api/v1';
+// 🔗 الاعتماد المباشر على سيرفر Render وتصفية المسار من أي سلاش زائدة
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://obsidian-x.onrender.com';
+const API_URL = `${BASE_URL.replace(/\/+$/, '')}/api/v1`;
 
 export const CategoryChip: React.FC<{
   item: CategoryItem;
