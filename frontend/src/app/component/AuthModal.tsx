@@ -28,7 +28,10 @@ const ALLOWED_DOMAINS = [
 ];
 
 // مسار الباك إند Go Fiber
-const API_BASE_URL = 'http://localhost:8080/api/v1/auth';
+// ✅ صحيح: يقرأ المتغير السحابي من Vercel ويلحق به مسار auth
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL 
+  ? `${process.env.NEXT_PUBLIC_API_URL}/api/v1/auth` 
+  : 'http://localhost:8080/api/v1/auth';
 
 export default function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
   const [isSignUp, setIsSignUp] = useState<boolean>(false);

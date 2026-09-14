@@ -29,7 +29,9 @@ const DEFAULT_CATEGORIES: CategoryItem[] = [
   { id: 3, label: 'Audio', icon: '🎧' },
 ];
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/api/v1';
+const API_URL = process.env.NEXT_PUBLIC_API_URL 
+  ? `${process.env.NEXT_PUBLIC_API_URL.replace(/\/$/, '')}/api/v1` 
+  : 'http://localhost:8080/api/v1';
 
 export const CategoryChip: React.FC<{
   item: CategoryItem;

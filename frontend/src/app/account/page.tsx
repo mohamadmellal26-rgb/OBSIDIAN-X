@@ -39,7 +39,10 @@ interface Product {
   userEmail?: string;
 }
 
-const API_BASE_URL = 'http://localhost:8080/api/v1';
+// ✅ صحيح: يقرأ من متغير البيئة أو يعود للمحلي عند التطوير
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL 
+  ? `${process.env.NEXT_PUBLIC_API_URL}/api/v1` 
+  : 'http://localhost:8080/api/v1';
 
 export default function AccountPage() {
   const router = useRouter();

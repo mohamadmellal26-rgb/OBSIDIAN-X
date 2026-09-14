@@ -5,7 +5,8 @@ import { useRouter } from 'next/navigation';
 import Header from '@/app/component/header';
 import { Store, ArrowLeft } from 'lucide-react';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/api/v1';
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://obsidian-x.onrender.com';
+const API_BASE_URL = `${BASE_URL.replace(/\/+$/, '')}/api/v1`;
 
 interface Category {
   id: number;
