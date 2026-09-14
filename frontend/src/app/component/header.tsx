@@ -12,7 +12,7 @@ interface Product {
   categoryName?: string;
 }
 
-// 🔗 التعديل هنا: توجيه الطلبات إلى سيرفر Render مباشرةً مع دعم متغيرات البيئة
+// 🔗 توجيه الطلبات إلى سيرفر Render مباشرةً مع دعم متغيرات البيئة
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://obsidian-x.onrender.com';
 const API_BASE_URL = `${BASE_URL.replace(/\/+$/, '')}/api/v1`;
 
@@ -142,7 +142,7 @@ export default function Header() {
                   filteredProducts.map(product => (
                     <Link
                       key={product.id}
-                      href={`/products/${product.id}`}
+                      href={`/product/${product.id}`}
                       onClick={() => setIsSearchOpen(false)}
                       style={{
                         display: 'flex',
