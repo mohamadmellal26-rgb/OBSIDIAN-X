@@ -1,54 +1,43 @@
 package main
 
 import (
-	"os"
+    "os"
 
-	"obsidian-backend/config"
-	"obsidian-backend/controllers"
+    "obsidian-backend/config"
+    "obsidian-backend/controllers"
 
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/cors"
+    "github.com/gofiber/fiber/v2"
+    "github.com/gofiber/fiber/v2/middleware/cors"
 )
 
 func main() {
-	// 1. الاتصال بقاعدة البيانات وتجهيز الهجرة التلقائية
-	config.ConnectDB()
+    config.ConnectDB()
 
-	app := fiber.New()
+    app := fiber.New()
 
-	// قراءة Origin المسموح به من البيئة أو استخدام localhost كبديل
-	clientURL := os.Getenv("CLIENT_URL")
-	if clientURL == "" {
-		clientURL = "http://localhost:3000"
-	}
+    // 🛑 السماح لنطاق Vercel ولـ localhost معاً بصورة صريحة
+    app.Use(cors.New(cors.Config{
+        AllowOrigins:     "https://opsidianx.vercel.app, http://localhost:3000",
+        AllowHeaders:     "Origin, Content-Type, Accept, Authorization, X-User-Email",
+        AllowMethods:     "GET, POST, PUT, DELETE, OPTIONS",
+        AllowCredentials: true,
+    }))
 
-	// 2. إعداد CORS
-	app.Use(cors.New(cors.Config{
-		AllowOrigins:     clientURL,
-		AllowHeaders:     "Origin, Content-Type, Accept, Authorization, X-User-Email",
-		AllowMethods:     "GET, POST, PUT, DELETE, OPTIONS",
-		AllowCredentials: true,
-	}))
+    api := app.Group("/api/v1")
 
-	// 3. مجموعة مسارات الـ API
-	api := app.Group("/api/v1")
+    api.Post("/auth/register", controllers.Register)
+    api.Post("/auth/login", controllers.Login)
 
-	// مسارات التوثيق (Auth Routes)
-	api.Post("/auth/register", controllers.Register)
-	api.Post("/auth/login", controllers.Login)
+    api.Get("/products", controllers.GetProducts)
+    api.Get("/products/:id", controllers.GetProductByID)
+    api.Post("/products", controllers.CreateProduct)
+    api.Post("/products/:id/reviews", controllers.AddProductReview)
+    api.Delete("/products/:id", controllers.DeleteProduct)
 
-	// مسارات المنتجات والتقييمات (Product & Reviews Routes)
-	api.Get("/products", controllers.GetProducts)
-	api.Get("/products/:id", controllers.GetProductByID)
-	api.Post("/products", controllers.CreateProduct)
-	api.Post("/products/:id/reviews", controllers.AddProductReview)
-	api.Delete("/products/:id", controllers.DeleteProduct)
+    port := os.Getenv("PORT")
+    if port == "" {
+        port = "10000"
+    }
 
-	// 4. تحديد المنفذ ديناميكيًا لقراءته من Render
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "8080"
-	}
-
-	app.Listen(":" + port)
+    app.Listen(":" + port)
 }
