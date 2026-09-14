@@ -1,5 +1,8 @@
 # Build Stage
-FROM golang:1.25-alpine AS builder
+FROM golang:1.26-alpine AS builder
+
+# السماح لـ Go بتحميل النسخة المطلوبة تلقائياً إذا تطلبت الحزم ذلك
+ENV GOTOOLCHAIN=auto
 
 WORKDIR /app
 
